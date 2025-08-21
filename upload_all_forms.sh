@@ -1,1 +1,4 @@
-find . -maxdepth 1 -type f -name '*.json' -print0 \\n  | while IFS= read -r -d '' f; do ./upload_forms.sh "$f"; done
+#!/bin/sh
+set -eu
+chmod +x upload_forms.sh
+find . -type f -name '*.json' -exec ./upload_forms.sh {} \;
