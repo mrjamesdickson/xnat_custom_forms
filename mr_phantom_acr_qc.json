@@ -1,0 +1,123 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "MR Session",
+        "value": "xnat:mrSessionData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "MR Phantom QC (ACR)",
+    "settings": {},
+    "components": [
+      {
+        "type": "datetime",
+        "label": "Scan Date",
+        "key": "scanDate",
+        "format": "yyyy-MM-dd",
+        "enableTime": false,
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "number",
+        "label": "Slice Thickness (mm)",
+        "key": "sliceThick",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "number",
+        "label": "Slice Spacing (mm)",
+        "key": "sliceSpace",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "number",
+        "label": "Geometric Accuracy (mm)",
+        "key": "geomAcc",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "number",
+        "label": "Low-Contrast Detectability (%)",
+        "key": "lcd",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0,
+          "max": 100
+        }
+      },
+      {
+        "type": "number",
+        "label": "High-Contrast Resolution (lp/cm)",
+        "key": "hcr",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "number",
+        "label": "SNR",
+        "key": "snr",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "select",
+        "label": "Pass/Fail",
+        "key": "pf",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Pass",
+              "value": "pass"
+            },
+            {
+              "label": "Fail",
+              "value": "fail"
+            },
+            {
+              "label": "Conditional",
+              "value": "conditional"
+            }
+          ]
+        },
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Comments",
+        "key": "comments",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

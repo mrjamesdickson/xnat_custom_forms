@@ -1,0 +1,40 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "Subject",
+        "value": "xnat:subjectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Allergies",
+    "settings": {},
+    "components": [
+      {
+        "type": "textarea",
+        "label": "Drug Allergies",
+        "key": "drugAllergies",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textarea",
+        "label": "Contrast Allergies (iodinated/gadolinium)",
+        "key": "contrastAllergies",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textarea",
+        "label": "Other Allergies",
+        "key": "otherAllergies",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

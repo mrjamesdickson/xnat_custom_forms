@@ -1,0 +1,105 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "PET Session",
+        "value": "xnat:petSessionData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "PET Acquisition Log",
+    "settings": {},
+    "components": [
+      {
+        "type": "number",
+        "label": "Number of Bed Positions",
+        "key": "bedPos",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "number",
+        "label": "Time per Bed (min)",
+        "key": "timePerBed",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "select",
+        "label": "Reconstruction",
+        "key": "recon",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "OSEM",
+              "value": "OSEM"
+            },
+            {
+              "label": "TOF OSEM",
+              "value": "TOF_OSEM"
+            },
+            {
+              "label": "PSF",
+              "value": "PSF"
+            },
+            {
+              "label": "FBP",
+              "value": "FBP"
+            }
+          ]
+        }
+      },
+      {
+        "type": "select",
+        "label": "Attenuation Correction Applied",
+        "key": "attenCorr",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "Unknown",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Motion / Artifacts",
+        "key": "artifacts",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textarea",
+        "label": "Notes",
+        "key": "notes",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

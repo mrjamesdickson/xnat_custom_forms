@@ -1,0 +1,78 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "Subject",
+        "value": "xnat:subjectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Withdrawal / Discontinuation",
+    "settings": {},
+    "components": [
+      {
+        "type": "datetime",
+        "label": "Date",
+        "key": "date",
+        "format": "yyyy-MM-dd",
+        "enableTime": false,
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "select",
+        "label": "Reason",
+        "key": "reason",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Adverse Event",
+              "value": "ae"
+            },
+            {
+              "label": "Lost to follow-up",
+              "value": "ltf"
+            },
+            {
+              "label": "Subject decision",
+              "value": "subject"
+            },
+            {
+              "label": "Investigator decision",
+              "value": "investigator"
+            },
+            {
+              "label": "Non-compliance",
+              "value": "noncompliance"
+            },
+            {
+              "label": "Death",
+              "value": "death"
+            },
+            {
+              "label": "Other",
+              "value": "other"
+            }
+          ]
+        },
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Details",
+        "key": "details",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

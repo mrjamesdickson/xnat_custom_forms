@@ -1,0 +1,88 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "Project",
+        "value": "xnat:projectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Image Processing Plan",
+    "settings": {},
+    "components": [
+      {
+        "type": "select",
+        "label": "Container-run policy",
+        "key": "policy",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Manual launch",
+              "value": "manual"
+            },
+            {
+              "label": "Auto-launch on upload",
+              "value": "auto"
+            },
+            {
+              "label": "Scheduled batches",
+              "value": "scheduled"
+            }
+          ]
+        }
+      },
+      {
+        "type": "textfield",
+        "label": "Primary Pipeline Name",
+        "key": "pipeline",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textarea",
+        "label": "Pipeline Parameters (YAML/JSON)",
+        "key": "params",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "select",
+        "label": "QC Gate required before processing",
+        "key": "qcGate",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "Unknown",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Outputs & destinations",
+        "key": "outputs",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

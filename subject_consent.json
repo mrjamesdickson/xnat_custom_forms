@@ -1,0 +1,105 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "Subject",
+        "value": "xnat:subjectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Subject Consent",
+    "settings": {},
+    "components": [
+      {
+        "type": "textfield",
+        "label": "Consent Version",
+        "key": "consentVersion",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "datetime",
+        "label": "Consent Date",
+        "key": "consentDate",
+        "format": "yyyy-MM-dd",
+        "enableTime": false,
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "textfield",
+        "label": "Consenting Staff",
+        "key": "consentingStaff",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "select",
+        "label": "Consent Type",
+        "key": "consentType",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Initial",
+              "value": "initial"
+            },
+            {
+              "label": "Re-consent",
+              "value": "reconsent"
+            }
+          ]
+        },
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "select",
+        "label": "Minor Assent",
+        "key": "minorAssent",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "N/A",
+              "value": "na"
+            }
+          ]
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Notes",
+        "key": "notes",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

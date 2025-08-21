@@ -1,0 +1,95 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "Project",
+        "value": "xnat:projectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Data Transfer Plan",
+    "settings": {},
+    "components": [
+      {
+        "type": "select",
+        "label": "Primary Transfer Method",
+        "key": "method",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "XNAT Portal Upload",
+              "value": "portal"
+            },
+            {
+              "label": "DICOM C-STORE",
+              "value": "cstore"
+            },
+            {
+              "label": "SFTP",
+              "value": "sftp"
+            },
+            {
+              "label": "Hard Drive Shipment",
+              "value": "drive"
+            }
+          ]
+        },
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "textfield",
+        "label": "Expected Frequency (e.g., weekly)",
+        "key": "frequency",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textfield",
+        "label": "Expected Volume per batch (GB)",
+        "key": "volumeGb",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "select",
+        "label": "De-identification verified",
+        "key": "deidVerified",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "Unknown",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Notes",
+        "key": "notes",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

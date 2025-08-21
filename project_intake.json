@@ -1,0 +1,113 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 5,
+      "xnatDatatype": {
+        "label": "Project",
+        "value": "xnat:projectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Project Intake",
+    "settings": {},
+    "components": [
+      {
+        "type": "textfield",
+        "label": "Sponsor",
+        "key": "sponsor",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textfield",
+        "label": "IRB/IEC Number",
+        "key": "irbNumber",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "select",
+        "label": "Study Phase",
+        "key": "studyPhase",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Pilot",
+              "value": "pilot"
+            },
+            {
+              "label": "Phase I",
+              "value": "p1"
+            },
+            {
+              "label": "Phase II",
+              "value": "p2"
+            },
+            {
+              "label": "Phase III",
+              "value": "p3"
+            },
+            {
+              "label": "Registry/Observational",
+              "value": "registry"
+            }
+          ]
+        }
+      },
+      {
+        "type": "select",
+        "label": "Blinding",
+        "key": "blinding",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Open Label",
+              "value": "open"
+            },
+            {
+              "label": "Single-blind",
+              "value": "single"
+            },
+            {
+              "label": "Double-blind",
+              "value": "double"
+            }
+          ]
+        }
+      },
+      {
+        "type": "number",
+        "label": "Expected Sites",
+        "key": "expectedSites",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 1
+        }
+      },
+      {
+        "type": "textfield",
+        "label": "Primary Contact Email",
+        "key": "primaryEmail",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textarea",
+        "label": "Notes",
+        "key": "notes",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

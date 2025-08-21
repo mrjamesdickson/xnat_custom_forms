@@ -1,0 +1,89 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "Subject",
+        "value": "xnat:subjectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Pregnancy Test",
+    "settings": {},
+    "components": [
+      {
+        "type": "datetime",
+        "label": "Test Date",
+        "key": "testDate",
+        "format": "yyyy-MM-dd",
+        "enableTime": false,
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "select",
+        "label": "Test Type",
+        "key": "testType",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Urine",
+              "value": "urine"
+            },
+            {
+              "label": "Serum",
+              "value": "serum"
+            }
+          ]
+        }
+      },
+      {
+        "type": "select",
+        "label": "Result",
+        "key": "result",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Negative",
+              "value": "neg"
+            },
+            {
+              "label": "Positive",
+              "value": "pos"
+            },
+            {
+              "label": "Indeterminate",
+              "value": "indet"
+            }
+          ]
+        },
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "textfield",
+        "label": "Performed By",
+        "key": "performedBy",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textarea",
+        "label": "Comments",
+        "key": "comments",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "Project",
+        "value": "xnat:projectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Imaging Deviation Log",
+    "settings": {},
+    "components": [
+      {
+        "type": "datagrid",
+        "label": "Deviations",
+        "key": "deviations",
+        "input": true,
+        "tableView": true,
+        "components": [
+          {
+            "type": "textfield",
+            "label": "Subject ID",
+            "key": "subjectId",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "datetime",
+            "label": "Date",
+            "key": "date",
+            "format": "yyyy-MM-dd",
+            "enableTime": false,
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "textfield",
+            "label": "Modality",
+            "key": "modality",
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "textfield",
+            "label": "Protocol Step",
+            "key": "protocolStep",
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "textfield",
+            "label": "Deviation Description",
+            "key": "desc",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "textarea",
+            "label": "Impact / Resolution",
+            "key": "impact",
+            "input": true,
+            "tableView": true
+          }
+        ]
+      }
+    ]
+  }
+}

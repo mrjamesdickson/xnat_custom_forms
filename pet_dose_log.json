@@ -1,0 +1,120 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "PET Session",
+        "value": "xnat:petSessionData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "PET Dose Log",
+    "settings": {},
+    "components": [
+      {
+        "type": "select",
+        "label": "Radiotracer",
+        "key": "radiotracer",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "18F-FDG",
+              "value": "FDG"
+            },
+            {
+              "label": "18F-NaF",
+              "value": "NaF"
+            },
+            {
+              "label": "68Ga-PSMA",
+              "value": "PSMA"
+            },
+            {
+              "label": "68Ga-DOTATATE",
+              "value": "DOTATATE"
+            },
+            {
+              "label": "Other",
+              "value": "other"
+            }
+          ]
+        },
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "number",
+        "label": "Injected Dose (MBq)",
+        "key": "doseMbq",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "datetime",
+        "label": "Injection Time",
+        "key": "injTime",
+        "format": "yyyy-MM-dd HH:mm",
+        "enableTime": true,
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "number",
+        "label": "Residual Dose (MBq)",
+        "key": "residualMbq",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "number",
+        "label": "Patient Weight (kg)",
+        "key": "weightKg",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "number",
+        "label": "Blood Glucose (mg/dL)",
+        "key": "glucose",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "number",
+        "label": "Uptake Time (min)",
+        "key": "uptake",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Notes",
+        "key": "notes",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

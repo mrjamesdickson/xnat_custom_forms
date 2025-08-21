@@ -1,0 +1,109 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "Subject",
+        "value": "xnat:subjectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Concomitant Medications",
+    "settings": {},
+    "components": [
+      {
+        "type": "datagrid",
+        "label": "Medications",
+        "key": "meds",
+        "input": true,
+        "tableView": true,
+        "components": [
+          {
+            "type": "textfield",
+            "label": "Name",
+            "key": "name",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "textfield",
+            "label": "Indication",
+            "key": "indication",
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "number",
+            "label": "Dose",
+            "key": "dose",
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "textfield",
+            "label": "Units",
+            "key": "units",
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "select",
+            "label": "Frequency",
+            "key": "freq",
+            "input": true,
+            "tableView": true,
+            "dataSrc": "values",
+            "data": {
+              "values": [
+                {
+                  "label": "QD",
+                  "value": "qd"
+                },
+                {
+                  "label": "BID",
+                  "value": "bid"
+                },
+                {
+                  "label": "TID",
+                  "value": "tid"
+                },
+                {
+                  "label": "PRN",
+                  "value": "prn"
+                },
+                {
+                  "label": "Other",
+                  "value": "other"
+                }
+              ]
+            }
+          },
+          {
+            "type": "datetime",
+            "label": "Start Date",
+            "key": "startDate",
+            "format": "yyyy-MM-dd",
+            "enableTime": false,
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "datetime",
+            "label": "End Date",
+            "key": "endDate",
+            "format": "yyyy-MM-dd",
+            "enableTime": false,
+            "input": true,
+            "tableView": true
+          }
+        ]
+      }
+    ]
+  }
+}

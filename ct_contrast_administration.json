@@ -1,0 +1,114 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "CT Session",
+        "value": "xnat:ctSessionData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "CT Contrast Administration",
+    "settings": {},
+    "components": [
+      {
+        "type": "select",
+        "label": "Agent",
+        "key": "agent",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Iodixanol",
+              "value": "iodixanol"
+            },
+            {
+              "label": "Iohexol",
+              "value": "iohexol"
+            },
+            {
+              "label": "Iopamidol",
+              "value": "iopamidol"
+            },
+            {
+              "label": "Other",
+              "value": "other"
+            }
+          ]
+        }
+      },
+      {
+        "type": "number",
+        "label": "Dose (mL)",
+        "key": "doseMl",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "number",
+        "label": "Rate (mL/s)",
+        "key": "rate",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "datetime",
+        "label": "Injection Time",
+        "key": "injTime",
+        "format": "yyyy-MM-dd HH:mm",
+        "enableTime": true,
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textfield",
+        "label": "Lot Number",
+        "key": "lot",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "select",
+        "label": "Pre-medication given",
+        "key": "premed",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "Unknown",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Notes",
+        "key": "notes",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

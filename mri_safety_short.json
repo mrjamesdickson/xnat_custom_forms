@@ -1,0 +1,135 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 20,
+      "xnatDatatype": {
+        "label": "Subject",
+        "value": "xnat:subjectData"
+      },
+      "isThisASiteWideConfiguration": "no",
+      "xnatProject": [
+        {
+          "label": "proj1",
+          "value": "proj1"
+        }
+      ]
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "MRI Safety (Short)",
+    "settings": {},
+    "components": [
+      {
+        "type": "select",
+        "label": "Pacemaker / ICD",
+        "key": "pacemaker",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "required": true
+        },
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "Unknown",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      {
+        "type": "select",
+        "label": "Metal Implants / Clips",
+        "key": "metalImplants",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "Unknown",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      {
+        "type": "select",
+        "label": "Pregnancy",
+        "key": "pregnancy",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "N/A",
+              "value": "na"
+            },
+            {
+              "label": "Unknown",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      {
+        "type": "select",
+        "label": "Claustrophobia",
+        "key": "claustrophobia",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Mild",
+              "value": "mild"
+            },
+            {
+              "label": "Severe",
+              "value": "severe"
+            }
+          ]
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Details / Exceptions",
+        "key": "details",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

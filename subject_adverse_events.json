@@ -1,0 +1,146 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "Subject",
+        "value": "xnat:subjectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Adverse Events Log",
+    "settings": {},
+    "components": [
+      {
+        "type": "datagrid",
+        "label": "Events",
+        "key": "events",
+        "input": true,
+        "tableView": true,
+        "components": [
+          {
+            "type": "datetime",
+            "label": "Onset Date",
+            "key": "onsetDate",
+            "format": "yyyy-MM-dd",
+            "enableTime": false,
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "datetime",
+            "label": "Resolution Date",
+            "key": "resDate",
+            "format": "yyyy-MM-dd",
+            "enableTime": false,
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "textfield",
+            "label": "Term / Description",
+            "key": "term",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "select",
+            "label": "Severity",
+            "key": "severity",
+            "input": true,
+            "tableView": true,
+            "dataSrc": "values",
+            "data": {
+              "values": [
+                {
+                  "label": "Mild",
+                  "value": "mild"
+                },
+                {
+                  "label": "Moderate",
+                  "value": "moderate"
+                },
+                {
+                  "label": "Severe",
+                  "value": "severe"
+                }
+              ]
+            },
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "select",
+            "label": "Related to Study?",
+            "key": "related",
+            "input": true,
+            "tableView": true,
+            "dataSrc": "values",
+            "data": {
+              "values": [
+                {
+                  "label": "No",
+                  "value": "no"
+                },
+                {
+                  "label": "Possible",
+                  "value": "possible"
+                },
+                {
+                  "label": "Probable",
+                  "value": "probable"
+                },
+                {
+                  "label": "Definite",
+                  "value": "definite"
+                }
+              ]
+            }
+          },
+          {
+            "type": "select",
+            "label": "Outcome",
+            "key": "outcome",
+            "input": true,
+            "tableView": true,
+            "dataSrc": "values",
+            "data": {
+              "values": [
+                {
+                  "label": "Resolved",
+                  "value": "resolved"
+                },
+                {
+                  "label": "Ongoing",
+                  "value": "ongoing"
+                },
+                {
+                  "label": "Fatal",
+                  "value": "fatal"
+                },
+                {
+                  "label": "Unknown",
+                  "value": "unknown"
+                }
+              ]
+            }
+          },
+          {
+            "type": "textarea",
+            "label": "Notes",
+            "key": "notes",
+            "input": true,
+            "tableView": true
+          }
+        ]
+      }
+    ]
+  }
+}

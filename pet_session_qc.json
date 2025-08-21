@@ -1,0 +1,251 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "PET Session",
+        "value": "xnat:petSessionData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "PET Session QC",
+    "settings": {},
+    "components": [
+      {
+        "type": "select",
+        "label": "Overall QC",
+        "key": "overallQc",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "required": true
+        },
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Pass",
+              "value": "pass"
+            },
+            {
+              "label": "Conditional Pass",
+              "value": "conditional"
+            },
+            {
+              "label": "Fail",
+              "value": "fail"
+            }
+          ]
+        }
+      },
+      {
+        "type": "select",
+        "label": "Radiotracer",
+        "key": "radiotracer",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "18F-FDG",
+              "value": "FDG"
+            },
+            {
+              "label": "18F-NaF",
+              "value": "NaF"
+            },
+            {
+              "label": "18F-Florbetapir (Amyloid)",
+              "value": "Florbetapir"
+            },
+            {
+              "label": "11C-PiB (Amyloid)",
+              "value": "PiB"
+            },
+            {
+              "label": "68Ga-PSMA",
+              "value": "PSMA"
+            },
+            {
+              "label": "68Ga-DOTATATE",
+              "value": "DOTATATE"
+            },
+            {
+              "label": "18F-FDOPA",
+              "value": "FDOPA"
+            }
+          ]
+        },
+        "placeholder": "Select or type\u2026",
+        "searchEnabled": true,
+        "allowCustom": true
+      },
+      {
+        "type": "number",
+        "label": "Injected Dose (MBq)",
+        "key": "injectedDoseMbq",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "datetime",
+        "label": "Injection Time",
+        "key": "injectionTime",
+        "format": "yyyy-MM-dd HH:mm",
+        "enableTime": true,
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "number",
+        "label": "Uptake Time (min)",
+        "key": "uptakeMin",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "number",
+        "label": "Blood Glucose (mg/dL)",
+        "key": "glucoseMgdl",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "select",
+        "label": "Motion / Artifacts",
+        "key": "artifacts",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "None",
+              "value": "none"
+            },
+            {
+              "label": "Mild",
+              "value": "mild"
+            },
+            {
+              "label": "Moderate",
+              "value": "moderate"
+            },
+            {
+              "label": "Severe",
+              "value": "severe"
+            }
+          ]
+        }
+      },
+      {
+        "type": "select",
+        "label": "Reconstruction Method",
+        "key": "reconMethod",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "OSEM",
+              "value": "OSEM"
+            },
+            {
+              "label": "TOF OSEM",
+              "value": "TOF_OSEM"
+            },
+            {
+              "label": "PSF modeling",
+              "value": "PSF"
+            },
+            {
+              "label": "Filtered Backprojection (FBP)",
+              "value": "FBP"
+            }
+          ]
+        },
+        "allowCustom": true
+      },
+      {
+        "type": "select",
+        "label": "Attenuation Correction",
+        "key": "attenCorr",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "CT-based",
+              "value": "CT"
+            },
+            {
+              "label": "MR-based (Dixon/UTE)",
+              "value": "MR"
+            },
+            {
+              "label": "None",
+              "value": "none"
+            }
+          ]
+        }
+      },
+      {
+        "type": "datetime",
+        "label": "SUV Calibration Date",
+        "key": "suvCalDate",
+        "format": "yyyy-MM-dd",
+        "enableTime": false,
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textfield",
+        "label": "Scanner Model (override if needed)",
+        "key": "scannerModelOverride",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textfield",
+        "label": "Reviewer",
+        "key": "reviewer",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "datetime",
+        "label": "Review Date",
+        "key": "reviewDate",
+        "format": "yyyy-MM-dd",
+        "enableTime": false,
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textarea",
+        "label": "Comments",
+        "key": "comments",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

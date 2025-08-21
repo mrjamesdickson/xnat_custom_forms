@@ -1,0 +1,89 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "CT Session",
+        "value": "xnat:ctSessionData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "CT Dose Summary",
+    "settings": {},
+    "components": [
+      {
+        "type": "datagrid",
+        "label": "Series Dose",
+        "key": "doseSeries",
+        "input": true,
+        "tableView": true,
+        "components": [
+          {
+            "type": "textfield",
+            "label": "Series Description",
+            "key": "seriesDesc",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "number",
+            "label": "CTDIvol (mGy)",
+            "key": "ctdivol",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "min": 0
+            }
+          },
+          {
+            "type": "number",
+            "label": "DLP (mGy*cm)",
+            "key": "dlp",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "min": 0
+            }
+          },
+          {
+            "type": "textfield",
+            "label": "kVp",
+            "key": "kvp",
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "number",
+            "label": "mAs",
+            "key": "mas",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "min": 0
+            }
+          },
+          {
+            "type": "textarea",
+            "label": "Notes",
+            "key": "notes",
+            "input": true,
+            "tableView": true
+          }
+        ]
+      },
+      {
+        "type": "textarea",
+        "label": "Overall Notes",
+        "key": "notes",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

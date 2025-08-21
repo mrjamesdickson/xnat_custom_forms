@@ -1,0 +1,87 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 6,
+      "xnatDatatype": {
+        "label": "Project",
+        "value": "xnat:projectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Randomization & Blinding Log",
+    "settings": {},
+    "components": [
+      {
+        "type": "datagrid",
+        "label": "Assignments",
+        "key": "assignments",
+        "input": true,
+        "tableView": true,
+        "components": [
+          {
+            "type": "textfield",
+            "label": "Subject ID",
+            "key": "subjectId",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "datetime",
+            "label": "Randomization Date",
+            "key": "randDate",
+            "format": "yyyy-MM-dd",
+            "enableTime": false,
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "textfield",
+            "label": "Arm/Group",
+            "key": "arm",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "select",
+            "label": "Blinded?",
+            "key": "blinded",
+            "input": true,
+            "tableView": true,
+            "dataSrc": "values",
+            "data": {
+              "values": [
+                {
+                  "label": "Yes",
+                  "value": "yes"
+                },
+                {
+                  "label": "No",
+                  "value": "no"
+                }
+              ]
+            },
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "textarea",
+            "label": "Notes",
+            "key": "notes",
+            "input": true,
+            "tableView": true
+          }
+        ]
+      }
+    ]
+  }
+}

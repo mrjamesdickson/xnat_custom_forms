@@ -1,0 +1,132 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 5,
+      "xnatDatatype": {
+        "label": "Subject",
+        "value": "xnat:subjectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Subject Demographics",
+    "settings": {},
+    "components": [
+      {
+        "type": "textfield",
+        "label": "First Name",
+        "key": "firstName",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "textfield",
+        "label": "Last Name",
+        "key": "lastName",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "datetime",
+        "label": "Date of Birth",
+        "key": "dob",
+        "format": "yyyy-MM-dd",
+        "enableTime": false,
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "select",
+        "label": "Sex at Birth",
+        "key": "sexAtBirth",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Female",
+              "value": "F"
+            },
+            {
+              "label": "Male",
+              "value": "M"
+            },
+            {
+              "label": "Intersex",
+              "value": "I"
+            },
+            {
+              "label": "Prefer not to say",
+              "value": "na"
+            }
+          ]
+        }
+      },
+      {
+        "type": "select",
+        "label": "Gender Identity",
+        "key": "genderId",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Woman",
+              "value": "woman"
+            },
+            {
+              "label": "Man",
+              "value": "man"
+            },
+            {
+              "label": "Non-binary",
+              "value": "nonbinary"
+            },
+            {
+              "label": "Other",
+              "value": "other"
+            },
+            {
+              "label": "Prefer not to say",
+              "value": "na"
+            }
+          ]
+        }
+      },
+      {
+        "type": "textfield",
+        "label": "Race/Ethnicity (free-text)",
+        "key": "raceEth",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textfield",
+        "label": "MRN / Subject Code",
+        "key": "mrn",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textfield",
+        "label": "Study ID",
+        "key": "studyId",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "required": true
+        }
+      }
+    ]
+  }
+}

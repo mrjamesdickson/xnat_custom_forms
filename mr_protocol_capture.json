@@ -1,0 +1,131 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "MR Session",
+        "value": "xnat:mrSessionData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "MR Protocol Capture",
+    "settings": {},
+    "components": [
+      {
+        "type": "textfield",
+        "label": "Protocol Name",
+        "key": "protocolName",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "textfield",
+        "label": "Primary Coil",
+        "key": "coil",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textfield",
+        "label": "Slice Orientation(s)",
+        "key": "orientation",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "datagrid",
+        "label": "Sequences",
+        "key": "sequences",
+        "input": true,
+        "tableView": true,
+        "components": [
+          {
+            "type": "textfield",
+            "label": "Series Description",
+            "key": "seriesDesc",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "textfield",
+            "label": "Sequence Name",
+            "key": "seqName",
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "number",
+            "label": "TR (ms)",
+            "key": "tr",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "min": 0
+            }
+          },
+          {
+            "type": "number",
+            "label": "TE (ms)",
+            "key": "te",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "min": 0
+            }
+          },
+          {
+            "type": "number",
+            "label": "Flip Angle (deg)",
+            "key": "fa",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "min": 0,
+              "max": 180
+            }
+          },
+          {
+            "type": "number",
+            "label": "Voxel Size (mm)",
+            "key": "voxelSize",
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "number",
+            "label": "Slices",
+            "key": "slices",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "min": 0
+            }
+          },
+          {
+            "type": "number",
+            "label": "Bandwidth (Hz/Px)",
+            "key": "bw",
+            "input": true,
+            "tableView": true
+          },
+          {
+            "type": "textarea",
+            "label": "Notes",
+            "key": "notes",
+            "input": true,
+            "tableView": true
+          }
+        ]
+      }
+    ]
+  }
+}

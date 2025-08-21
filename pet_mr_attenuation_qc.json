@@ -1,0 +1,160 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "PET Session",
+        "value": "xnat:petSessionData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "PET/MR Attenuation QC",
+    "settings": {},
+    "components": [
+      {
+        "type": "select",
+        "label": "AC Method",
+        "key": "acMethod",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Dixon 4-class",
+              "value": "dixon"
+            },
+            {
+              "label": "UTE/ZTE",
+              "value": "ute"
+            },
+            {
+              "label": "Atlas-based",
+              "value": "atlas"
+            },
+            {
+              "label": "CT-based",
+              "value": "ct"
+            },
+            {
+              "label": "None",
+              "value": "none"
+            }
+          ]
+        },
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "select",
+        "label": "Bone included",
+        "key": "boneIncl",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "Unknown",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      {
+        "type": "select",
+        "label": "Air mask correct",
+        "key": "airMask",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "Unknown",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      {
+        "type": "select",
+        "label": "Truncation present",
+        "key": "truncation",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "Unknown",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      {
+        "type": "select",
+        "label": "Overall QC",
+        "key": "overallQc",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Pass",
+              "value": "pass"
+            },
+            {
+              "label": "Conditional",
+              "value": "conditional"
+            },
+            {
+              "label": "Fail",
+              "value": "fail"
+            }
+          ]
+        },
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Comments",
+        "key": "comments",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "Subject",
+        "value": "xnat:subjectData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "Inclusion/Exclusion Checklist",
+    "settings": {},
+    "components": [
+      {
+        "type": "datagrid",
+        "label": "Inclusion Criteria",
+        "key": "inclusion",
+        "input": true,
+        "tableView": true,
+        "components": [
+          {
+            "type": "textfield",
+            "label": "Criterion",
+            "key": "criterion",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "select",
+            "label": "Meets?",
+            "key": "meets",
+            "input": true,
+            "tableView": true,
+            "dataSrc": "values",
+            "data": {
+              "values": [
+                {
+                  "label": "No",
+                  "value": "no"
+                },
+                {
+                  "label": "Yes",
+                  "value": "yes"
+                },
+                {
+                  "label": "N/A",
+                  "value": "na"
+                }
+              ]
+            },
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "textarea",
+            "label": "Notes",
+            "key": "notes",
+            "input": true,
+            "tableView": true
+          }
+        ]
+      },
+      {
+        "type": "datagrid",
+        "label": "Exclusion Criteria",
+        "key": "exclusion",
+        "input": true,
+        "tableView": true,
+        "components": [
+          {
+            "type": "textfield",
+            "label": "Criterion",
+            "key": "criterion",
+            "input": true,
+            "tableView": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "select",
+            "label": "Applies?",
+            "key": "applies",
+            "input": true,
+            "tableView": true,
+            "dataSrc": "values",
+            "data": {
+              "values": [
+                {
+                  "label": "No",
+                  "value": "no"
+                },
+                {
+                  "label": "Yes",
+                  "value": "yes"
+                },
+                {
+                  "label": "N/A",
+                  "value": "na"
+                }
+              ]
+            },
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "textarea",
+            "label": "Notes",
+            "key": "notes",
+            "input": true,
+            "tableView": true
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "label": "Eligibility Status",
+        "key": "eligibility",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Eligible",
+              "value": "eligible"
+            },
+            {
+              "label": "Ineligible",
+              "value": "ineligible"
+            },
+            {
+              "label": "Pending",
+              "value": "pending"
+            }
+          ]
+        },
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Reviewer Notes",
+        "key": "reviewerNotes",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "MR Session",
+        "value": "xnat:mrSessionData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "MR Contrast Administration",
+    "settings": {},
+    "components": [
+      {
+        "type": "select",
+        "label": "Agent",
+        "key": "agent",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Gadobutrol",
+              "value": "gadobutrol"
+            },
+            {
+              "label": "Gadoterate",
+              "value": "gadoterate"
+            },
+            {
+              "label": "Gadopentetate",
+              "value": "gadopentetate"
+            },
+            {
+              "label": "Other",
+              "value": "other"
+            }
+          ]
+        }
+      },
+      {
+        "type": "number",
+        "label": "Dose (mL)",
+        "key": "doseMl",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "number",
+        "label": "Concentration (mmol/mL)",
+        "key": "conc",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0
+        }
+      },
+      {
+        "type": "datetime",
+        "label": "Injection Time",
+        "key": "injTime",
+        "format": "yyyy-MM-dd HH:mm",
+        "enableTime": true,
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "select",
+        "label": "Injection Method",
+        "key": "method",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Manual",
+              "value": "manual"
+            },
+            {
+              "label": "Power Injector",
+              "value": "pi"
+            }
+          ]
+        }
+      },
+      {
+        "type": "textfield",
+        "label": "Lot Number",
+        "key": "lot",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textarea",
+        "label": "Notes",
+        "key": "notes",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

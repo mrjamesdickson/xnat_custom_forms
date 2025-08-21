@@ -1,0 +1,64 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "MR Session",
+        "value": "xnat:mrSessionData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "BIDS Session Metadata",
+    "settings": {},
+    "components": [
+      {
+        "type": "textfield",
+        "label": "Task Name(s)",
+        "key": "taskNames",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "textfield",
+        "label": "Phase Encoding Direction(s)",
+        "key": "peDir",
+        "input": true,
+        "tableView": true
+      },
+      {
+        "type": "select",
+        "label": "IntendedFor set for fieldmaps",
+        "key": "intendedFor",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "Unknown",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Notes",
+        "key": "notes",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}

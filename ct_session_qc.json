@@ -1,0 +1,89 @@
+{
+  "submission": {
+    "data": {
+      "zIndex": 10,
+      "xnatDatatype": {
+        "label": "CT Session",
+        "value": "xnat:ctSessionData"
+      },
+      "isThisASiteWideConfiguration": "yes"
+    }
+  },
+  "builder": {
+    "display": "form",
+    "title": "CT Session QC",
+    "settings": {},
+    "components": [
+      {
+        "type": "select",
+        "label": "Overall QC",
+        "key": "overallQc",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "Pass",
+              "value": "pass"
+            },
+            {
+              "label": "Conditional",
+              "value": "conditional"
+            },
+            {
+              "label": "Fail",
+              "value": "fail"
+            }
+          ]
+        },
+        "validate": {
+          "required": true
+        }
+      },
+      {
+        "type": "number",
+        "label": "Motion/Artifacts (score)",
+        "key": "artifactScore",
+        "input": true,
+        "tableView": true,
+        "validate": {
+          "min": 0,
+          "max": 10
+        },
+        "step": 1
+      },
+      {
+        "type": "select",
+        "label": "Contrast Extravasation",
+        "key": "extravasation",
+        "input": true,
+        "tableView": true,
+        "dataSrc": "values",
+        "data": {
+          "values": [
+            {
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "label": "Unknown",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      {
+        "type": "textarea",
+        "label": "Comments",
+        "key": "comments",
+        "input": true,
+        "tableView": true
+      }
+    ]
+  }
+}
