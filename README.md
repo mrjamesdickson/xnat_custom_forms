@@ -18,8 +18,9 @@ XNAT_TOKEN=your_pat_token   # or XNAT_USER/XNAT_PASS
 ```
 2) Run the upload:
 ```
-chmod +x upload_forms.sh
-./upload_forms.sh *.json
+chmod +x *.sh
+./upload_all_forms.sh
+
 ```
 3) Verify in XNAT: Tools → Custom Forms → Manage Data Forms.
 
